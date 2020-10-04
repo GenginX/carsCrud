@@ -1,6 +1,7 @@
 package com.kaczmarm.Cars.service;
 
 import com.kaczmarm.Cars.model.Car;
+import com.kaczmarm.Cars.model.CarDto;
 import com.kaczmarm.Cars.repository.CarRepository;
 import org.json.JSONException;
 import org.springframework.stereotype.Service;
@@ -17,14 +18,14 @@ public class CarService {
         this.restTemplateService = restTemplateService;
     }
 
-    public Car saveCar(Car car) throws JSONException {
+    public Car saveCar(CarDto car) throws JSONException {
         Car buildedCar = Car.builder()
                 .brand(car.getBrand())
                 .model(car.getModel())
                 .year(car.getYear())
-                .username(restTemplateService.getUserInformation("username"))
-                .surname(restTemplateService.getUserInformation("surname"))
-                .age(restTemplateService.getUserInformation("age"))
+                .username(restTemplateService.getUserInformation("username", car.getUserId()))
+                .surname(restTemplateService.getUserInformation("surname", car.getUserId()))
+                .age(restTemplateService.getUserInformation("age", car.getUserId()))
                 .build();
         return carRepository.save(buildedCar);
     }

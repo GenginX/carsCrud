@@ -1,6 +1,7 @@
 package com.kaczmarm.Cars.controller;
 
 import com.kaczmarm.Cars.model.Car;
+import com.kaczmarm.Cars.model.CarDto;
 import com.kaczmarm.Cars.service.CarService;
 import org.json.JSONException;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,7 @@ public class CarController {
     }
 
     @PostMapping
-    public ResponseEntity<Car> createCar(@RequestBody Car car) throws JSONException {
+    public ResponseEntity<Car> createCar(@RequestBody CarDto car) throws JSONException {
         Car carCreated = carService.saveCar(car);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
