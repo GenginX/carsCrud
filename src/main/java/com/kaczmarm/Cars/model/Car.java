@@ -1,6 +1,7 @@
 package com.kaczmarm.Cars.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import javax.persistence.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Car {
 
     @Id
@@ -25,5 +27,9 @@ public class Car {
 
     private String year;
 
-//    private User user;
+    private String username;
+
+    private String surname;
+
+    private String age;
 }
