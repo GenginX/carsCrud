@@ -1,11 +1,9 @@
 package com.kaczmarm.Cars.service;
 
-import com.kaczmarm.Cars.exception.IncorrectInformationException;
 import com.kaczmarm.Cars.model.Car;
 import com.kaczmarm.Cars.model.CarDto;
 import com.kaczmarm.Cars.model.CarView;
 import com.kaczmarm.Cars.repository.CarRepository;
-import org.json.JSONException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +19,7 @@ public class CarService {
         this.restTemplateService = restTemplateService;
     }
 
-    public Car saveCar(CarDto car) throws IncorrectInformationException {
+    public Car saveCar(CarDto car) {
         Car buildedCar = Car.builder()
                 .brand(car.getBrand())
                 .model(car.getModel())
