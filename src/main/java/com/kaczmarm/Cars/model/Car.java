@@ -31,5 +31,7 @@ public class Car {
 
     private String surname;
 
-    private String age;
+    private int age;
+
+    private Long userId;
 }
