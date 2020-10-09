@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateService {
 
     public static final String BAD_INFORMATION = "INCORRECT INFORMATION PROVIDED";
-    private final String apiURL = "http://localhost:8080/users/";
+    private final String apiURL = "https://user-crud-hrk.herokuapp.com/users";
 
     public UserView getUserInformation(Long id) {
         RestTemplate restTemplate = new RestTemplate();
