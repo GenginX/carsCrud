@@ -28,7 +28,7 @@ public class CarController {
                 .map(e -> carService.convertCartoCarView(e))
                 .collect(Collectors.toList());
         return ResponseEntity
-                .status(HttpStatus.FOUND)
+                .status(HttpStatus.OK)
                 .body(allCars);
     }
 
@@ -46,7 +46,7 @@ public class CarController {
                 .map(e -> carService.convertCartoCarView(e))
                 .collect(Collectors.toList());
         return ResponseEntity
-                .status(HttpStatus.FOUND)
+                .status(HttpStatus.OK)
                 .body(carsByUserId);
     }
 

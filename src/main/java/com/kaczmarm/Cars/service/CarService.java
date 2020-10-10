@@ -50,6 +50,7 @@ public class CarService {
                 .username(car.getUsername())
                 .surname(car.getSurname())
                 .age(car.getAge())
+                .userId(car.getUserId())
                 .build();
 
     }
