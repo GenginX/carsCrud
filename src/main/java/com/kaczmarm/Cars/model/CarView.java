@@ -21,6 +21,4 @@ public class CarView {
 
     private int age;
 
-    private Long userId;
-
 }
