@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/cars")
+@CrossOrigin
 public class CarController {
 
     private CarService carService;
